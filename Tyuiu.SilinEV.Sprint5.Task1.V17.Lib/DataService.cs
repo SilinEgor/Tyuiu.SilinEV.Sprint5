@@ -10,7 +10,7 @@ namespace Tyuiu.SilinEV.Sprint5.Task1.V17.Lib
 
             for (int i = startValue; i <= stopValue; i++)
             {
-                a += Convert.ToString(2 * i - 4 + ((2 * i - 1) / (Math.Sin(i) + 1))) + Environment.NewLine;
+                a += Convert.ToString(Math.Round(2 * i - 4 + ((2 * i - 1) / (Math.Sin(i) + 1)), 2)) + Environment.NewLine;
             }
 
             return a;
