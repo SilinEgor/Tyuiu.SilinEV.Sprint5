@@ -16,8 +16,8 @@ namespace Tyuiu.SilinEV.Sprint5.Task2.V3.Lib
                     if (matrix[i, j] % 2 == 1) a += 0;
                     else a += matrix[i, j];
 
-                    if (j != matrix.GetLength(1) - 1 || i != matrix.GetLength(0) - 1) a += ";";
-                    else a += Environment.NewLine;
+                    if (j != matrix.GetLength(1) - 1) a += ";";
+                    else if (i != matrix.GetLength(0) - 1) a += Environment.NewLine;
                 }
             }
 
