@@ -15,7 +15,7 @@ namespace Tyuiu.SilinEV.Sprint5.Task3.V22.Lib
                 writer.Write(BitConverter.GetBytes(a));
             }
 
-            return path;
+            return Convert.ToString(Math.Round(Math.Pow(1 - x, 2) / (-3 * x), 3));
         }
     }
 }
