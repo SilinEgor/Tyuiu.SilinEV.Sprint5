@@ -15,7 +15,23 @@ namespace Tyuiu.SilinEV.Sprint5.Task3.V22.Lib
             //    writer.Write(BitConverter.GetBytes(a));
             //}
 
-            return Convert.ToString(Convert.ToString(Math.Round(Math.Pow(1 - x, 2) / (-3 * x), 3)));
+            //return Convert.ToString(Convert.ToString(Math.Round(Math.Pow(1 - x, 2) / (-3 * x), 3)));
+
+            string outputFile = "OutPutFileTask3.bin";
+
+            string path = Path.Combine(Path.GetTempPath(), outputFile);
+
+            FileInfo fileInfo = new(path);
+            bool fileExists = fileInfo.Exists;
+            if (fileExists) File.Delete(path);
+
+            double r = Math.Round(Math.Pow(1 - x, 2) / (-3 * x), 3);
+
+            using (BinaryWriter writer = new(File.Open(path, FileMode.Append)))
+            {
+                writer.Write(r);
+            }
+            return path;
         }
     }
 }
