@@ -7,16 +7,6 @@ namespace Tyuiu.SilinEV.Sprint5.Task3.V22.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            //string path = $@"{Directory.GetCurrentDirectory()}/OutPutFileTask3.bin";
-            //double a = Math.Round(Math.Pow(1 - x, 2) / (-3 * x), 3);
-
-            //using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate)))
-            //{
-            //    writer.Write(BitConverter.GetBytes(a));
-            //}
-
-            //return Convert.ToString(Convert.ToString(Math.Round(Math.Pow(1 - x, 2) / (-3 * x), 3)));
-
             string outputFile = "OutPutFileTask3.bin";
 
             string path = Path.Combine(Path.GetTempPath(), outputFile);
