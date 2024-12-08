@@ -6,7 +6,7 @@ namespace Tyuiu.SilinEV.Sprint5.Task7.V20.Lib
     {
         public string LoadDataAndSave(string path)
         {
-            return File.ReadAllText(path).Replace("сс", "с");
+            return File.ReadAllText(path).Replace("сс", "с").Replace("Сс", "C");
         }
     }
 }
