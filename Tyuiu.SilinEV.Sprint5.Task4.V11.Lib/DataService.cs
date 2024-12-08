@@ -6,7 +6,7 @@ namespace Tyuiu.SilinEV.Sprint5.Task4.V11.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            double a = Convert.ToDouble(File.ReadAllText(path));
+            double a = Convert.ToDouble(File.ReadAllText(path).Replace(".", ","));
 
             return Math.Round(Math.Sin(a) + (a * a) / 2, 3);
         }
